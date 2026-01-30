@@ -82,6 +82,10 @@ body {
   font-size: 18px;
 }
 
+.hero-buttons a {
+  text-align: center;
+}
+
 /* BUTTONS */
 
 .btn-primary {
