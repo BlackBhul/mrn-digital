@@ -90,27 +90,16 @@ body {
   border-radius: 50px;
   color: #000;
   font-weight: 600;
-  text-decoration: none;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  line-height: 1;
+  text-decoration: none;s
 }
 
 .btn-outline {
   border: 1px solid var(--primary);
   padding: 14px 32px;
   border-radius: 50px;
+  margin-left: 20px;
   color: var(--primary);
   text-decoration: none;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  line-height: 1;
 }
 
 .big {
