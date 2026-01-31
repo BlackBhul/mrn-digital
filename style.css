@@ -150,55 +150,49 @@ body {
   text-decoration: none;
 } */
 
+.hero-content {
+  max-width: 720px;
+  width: 100%;
+}
+
 .hero-buttons {
   display: flex;
+  flex-direction: column;
   gap: 18px;
+  width: 100%;
   margin-top: 40px;
 }
 
-/* BOTTONI BASE */
+/* BOTTONI */
 .btn-primary,
 .btn-outline {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: 14px 36px;
+  width: 100%;
+  max-width: 360px;
+
+  margin: 0 auto;
+
+  padding: 16px 0;
+
   border-radius: 50px;
   font-weight: 600;
+  font-size: 17px;
   text-decoration: none;
-
-  min-width: 220px;
 }
 
-/* RIMUOVE SPAZI EXTRA */
+/* PRIMARY */
+.btn-primary {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: #000;
+}
+
+/* OUTLINE */
 .btn-outline {
-  margin-left: 0;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .btn-primary,
-  .btn-outline {
-    width: 100%;
-    max-width: 360px;
-  }
-}
-
-.btn-primary:hover {
-  filter: brightness(1.15);
-  transform: translateY(-1px);
-}
-
-.btn-outline:hover {
-  background: rgba(0,229,255,0.08);
+  border: 2px solid var(--primary);
+  color: var(--primary);
 }
 
 .big {
