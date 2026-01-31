@@ -15,7 +15,7 @@ body {
   --primary: #00e5ff;
   --secondary: #7c3aed;
   --bg: #0b0f14;
-  --glass: rgba(255,255,255,0.06);
+  --glass: rgba(255, 255, 255, 0.06);
 }
 
 /* NAVBAR */
@@ -90,7 +90,8 @@ body {
 } */
 
 .hero h1 span {
-  color: #00e5ff; /* fallback */
+  color: #00e5ff;
+  /* fallback */
 
   background: linear-gradient(90deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
@@ -229,13 +230,13 @@ body {
   border-radius: 24px;
   padding: 40px 30px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   transition: .4s;
 }
 
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 0 30px rgba(0,229,255,0.25);
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.25);
 }
 
 .service-card i {
@@ -264,14 +265,14 @@ body {
 /* CONTACT */
 
 .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: linear-gradient(135deg, #00e5ff15, #7c3aed15);
 }
 
 .contact p {
-        margin-bottom: 7vh;
+  margin-bottom: 7vh;
 
 }
 
@@ -295,14 +296,14 @@ footer {
   border-radius: 28px;
   padding: 45px 40px;
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   transition: 0.4s ease;
   text-align: left;
 }
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 0 40px rgba(0,229,255,0.25);
+  box-shadow: 0 0 40px rgba(0, 229, 255, 0.25);
 }
 
 .project-header {
@@ -336,4 +337,57 @@ footer {
   margin-bottom: 8px;
   color: #e5e7eb;
   font-size: 15px;
+}
+
+/* ================= MOBILE MENU ================= */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+
+  .nav-links {
+    position: fixed;
+    inset: 0;
+    background: #0b0f14;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    transform: translateX(100%);
+    transition: 0.4s ease;
+    z-index: 999;
+  }
+
+  .nav-links a {
+    font-size: 26px;
+    margin: 0;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .hamburger {
+    display: flex;
+    z-index: 1000;
+  }
+}
+
+body.menu-open {
+  overflow: hidden;
 }
