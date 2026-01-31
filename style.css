@@ -106,7 +106,7 @@ body {
 }
 
 /* BUTTONS */
-.hero-buttons {
+/* .hero-buttons {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
@@ -148,6 +148,57 @@ body {
   margin-left: 20px;
   color: var(--primary);
   text-decoration: none;
+} */
+
+.hero-buttons {
+  display: flex;
+  gap: 18px;
+  margin-top: 40px;
+}
+
+/* BOTTONI BASE */
+.btn-primary,
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+
+  min-width: 220px;
+}
+
+/* RIMUOVE SPAZI EXTRA */
+.btn-outline {
+  margin-left: 0;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+.btn-primary:hover {
+  filter: brightness(1.15);
+  transform: translateY(-1px);
+}
+
+.btn-outline:hover {
+  background: rgba(0,229,255,0.08);
 }
 
 .big {
